@@ -23,13 +23,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section
-      className="full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white 2xl:h-[var(--desktop-hero-height)]"
-      style={
-        {
-          "--desktop-hero-height": `${desktopImage.height / 2}px`,
-          "--mobile-hero-height": `${mobileImage.height / 2}px`,
-        } as CSSProperties
-      }
+      className="full-width-bg relative pt-[var(--header-area)] text-white h-[900px] lg:h-[1000px] xl:h-[1100px] 2xl:h-[1200px]"
     >
       {large ? (
         <div className="full-width-bg__inner flex flex-col items-center justify-center py-20 text-center">
@@ -43,7 +37,7 @@ const Hero = ({
         </div>
       )}
 
-      <div className="absolute inset-0 -z-10 2xl:hidden md:ml-[-25%]">
+      <div className="absolute inset-0 -z-10 md:ml-[-25%] lg:ml-0">
         <Image
           src={mobileImage}
           alt=""
@@ -54,19 +48,7 @@ const Hero = ({
           priority={true}
         />
       </div>
-
-      <div className="absolute inset-0 -z-10 hidden 2xl:block">
-        <Image
-          className="desktop-hero"
-          src={desktopImage}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center bottom"
-          placeholder="blur"
-          priority={true}
-        />
-      </div>
+      
     </section>
   )
 }
