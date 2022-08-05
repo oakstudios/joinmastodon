@@ -150,6 +150,7 @@ const Header = () => {
                             href={child.value}
                             locale={child.locale || undefined}
                             scroll={child.scroll ?? true}
+                            passHref
                           >
                             <a
                               {...bindSecondaryMenuItem(
@@ -173,7 +174,7 @@ const Header = () => {
                   </>
                 ) : (
                   // Top-level Link
-                  <Link href={item.value}>
+                  <Link href={item.value} passHref>
                     <a
                       className={classNames(
                         "whitespace-nowrap text-h5 md:text-b2",

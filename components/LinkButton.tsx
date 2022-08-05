@@ -39,7 +39,7 @@ const LinkButton = ({
   }
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a
         className={classnames(
           "flex items-center justify-center rounded border-2 p-4 text-center !font-600 transition-colors hocus:border-main-blurple hocus:bg-main-blurple hocus:text-white",
